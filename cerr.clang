@@ -1,0 +1,16 @@
+clang version 2.8 (branches/release_28)
+Target: rigel-unknown-unknown
+Thread model: posix
+ "/scr/tischer1/rigel_git/rigel/install/host/bin/clang" -cc1 -triple rigel-unknown-unknown -S -disable-free -main-file-name carve.c -static-define -mrelocation-model static -mconstructor-aliases -target-linker-version 2.20.51 -v -resource-dir /scr/tischer1/rigel_git/rigel/install/host/lib/clang/2.8 -D LLVM28 -D RIGEL -D CLUSTER_LOCAL_TQ -I . -I /scr/tischer1/rigel_git/rigel/install/target/include -I /scr/tischer1/rigel_git/rigel/sim/rigel-sim//includes -O3 -Wall -Wno-unused-variable -ferror-limit 19 -fmessage-length 0 -fgnu-runtime -fdiagnostics-show-option -o /tmp/cc-HjtYTs.s -x c carve.c
+clang -cc1 version 2.8 based upon llvm 2.8 hosted on x86_64-unknown-linux-gnu
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /scr/tischer1/rigel_git/rigel/install/target/include
+ /scr/tischer1/rigel_git/rigel/sim/rigel-sim//includes
+ /usr/local/include
+ /scr/tischer1/rigel_git/rigel/install/host/lib/clang/2.8/include
+ /usr/include
+End of search list.
+ "/scr/tischer1/rigel_git/rigel/install/host/bin/rigelas" -EL -march=mipsrigel32 -o /tmp/cc-FAwMnr.o /tmp/cc-HjtYTs.s
+ "/scr/tischer1/rigel_git/rigel/install/host/bin/rigelld" -EL -o carve.tasks /scr/tischer1/rigel_git/rigel/install/target/lib/rigel-crt0-mp.ro -L/scr/tischer1/rigel_git/rigel/install/target/lib /tmp/cc-FAwMnr.o --oformat=elf32-bigmips -T/scr/tischer1/rigel_git/rigel/install/target/lib/linker/rigel.ld -lm -lpar -lpthread /scr/tischer1/rigel_git/rigel/install/target/lib/libc.a /scr/tischer1/rigel_git/rigel/install/target/lib/libsim.a -lcompiler_rt

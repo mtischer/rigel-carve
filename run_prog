@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+source ../../common.sh
+
+make clean && make
+
+BENCHMARK=carve.tasks
+NAME_STRING="Carve (non_rtm)"
+
+INPUT_PNG="in.png"
+
+#if($1 != "")
+#then
+#  INPUT_PNG=$1
+#fi
+
+THREADS=1
+CLUSTERS=1
+ARGS="--args 2 "threads_${THREADS}_emap.out" "threads_${THREADS}_smap.out""
+TEST_STRING="$THREADS thread $CLUSTERS cluster"
+./pngtorigel $INPUT_PNG "rigel.pngdata"
+echo "128" | $RIGELSIM $ARGS -threads $THREADS -clusters $CLUSTERS $BENCHMARK 2> threads_1.out 1> cerr.out 
+cat RUN_OUTPUT/rigelprint.out | sed 's/0x[0-9a-f]* (PC 0x[0-9a-f]*)//' > RUN_OUTPUT/compare.out
+./rigeltopng output.pngdata threads_1.png
+if(diff RUN_OUTPUT/compare.out rigelprint.out.GOLD > mt1diff.out) then
+  echo "===== Passed ($NAME_STRING $TEST_STRING) ====="
+else
+  echo "===== Failed ($NAME_STRING $TEST_STRING) ====="
+fi

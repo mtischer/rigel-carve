@@ -1,0 +1,30 @@
+starting!
+RigelSim Compiled by tischer1 on Feb 23 2012 at 16:58:19 from Git commit:
+commit b6b2a15e44d451ed31dcb6281e88aedce73f1176
+Author: Matt Johnson <johnso87@crhc.illinois.edu>
+Date:   Thu Feb 23 02:38:09 2012 -0600
+
+    Switch /bin/bash to /usr/bin/env bash
+
+NOTE: Starting up with SIM_SLEEP [ON]! All cores but 0 are ASLEEP!
+p_type 00000001 p_offset 00001000 p_vaddr 00000000 p_paddr 00000000 p_filesz 00041010 p_memsz 00041018 p_flags 00000007 p_align 00001000
+p_type 00000001 p_offset 00042020 p_vaddr 00041020 p_paddr 00041020 p_filesz 000005a4 p_memsz 00a74788 p_flags 00000006 p_align 00001000
+Executable has 2 phdrs
+Start address is 0x00000000
+Writing 0x003FFFC0 to MEM[0x003FFFF4] as part of argv[0]
+Writing 0x76726163 to MEM[0x003FFFC0] as part of *argv[0]
+Writing 0x61742E65 to MEM[0x003FFFC4] as part of *argv[0]
+Writing 0x00736B73 to MEM[0x003FFFC8] as part of *argv[0]
+Writing 0x003FFFCC to MEM[0x003FFFF8] as part of argv[1]
+Writing 0x65726874 to MEM[0x003FFFCC] as part of *argv[1]
+Writing 0x5F736461 to MEM[0x003FFFD0] as part of *argv[1]
+Writing 0x6D655F34 to MEM[0x003FFFD4] as part of *argv[1]
+Writing 0x6F2E7061 to MEM[0x003FFFD8] as part of *argv[1]
+Writing 0x00007475 to MEM[0x003FFFDC] as part of *argv[1]
+Writing 0x003FFFE0 to MEM[0x003FFFFC] as part of argv[2]
+Writing 0x65726874 to MEM[0x003FFFE0] as part of *argv[2]
+Writing 0x5F736461 to MEM[0x003FFFE4] as part of *argv[2]
+Writing 0x6D735F34 to MEM[0x003FFFE8] as part of *argv[2]
+Writing 0x6F2E7061 to MEM[0x003FFFEC] as part of *argv[2]
+Writing 0x00007475 to MEM[0x003FFFF0] as part of *argv[2]
+Warning: object Chip 0 has NULL parent 
